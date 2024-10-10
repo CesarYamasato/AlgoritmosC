@@ -5,8 +5,9 @@ fastpow(int i, int n)
 {
     if(i != 1)
     {
-        if(i%2) return fastpow(i/2,n)*fastpow(i/2,n)*n;
-        return fastpow(i/2,n)*fastpow(i/2,n);
+        int exponent = fastpow(i/2,n);
+        if(i%2) return exponent*exponent*n;
+        return exponent*exponent;
     }
     return n;
 }
